@@ -18,13 +18,12 @@ class OurDenseLayer(tf.keras.layers.Layer):
     self.b = self.add_weight("bias", shape=[1, self.n_output_nodes]) # note the dimensionality
 
   def call(self, x):
-    '''TODO: define the operation for z (hint: use tf.matmul)'''
-    z = tf.matmul(x, self.W) + self.b # TODO
-    # z = # TODO
+    '''define the operation for z'''
+    z = tf.matmul(x, self.W) + self.b 
+  
 
-    '''TODO: define the operation for out (hint: use tf.sigmoid)'''
-    y = tf.sigmoid(z) # TODO
-    # y = # TODO
+    ''' define the operation for out'''
+    y = tf.sigmoid(z)
     return y
 
 # Since layer parameters are initialized randomly, we will set a random seed for reproducibility
